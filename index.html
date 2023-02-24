@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>College Tuition and Pay After Graduation</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="w3-row w3-padding-64" id="about">
+      <h1>College Tuition and Pay After Graduation</h1>
+    </div>
+    <div class="w3-content" style="max-width: 1200px">
+      <div class="w3-column">
+        <h3 class="w3-center w3-padding-24">
+          <span class="w3-tag w3-wide">QUESTIONS</span>
+        </h3>
+        <div class="w3-container w3-padding-24 w3-card text">
+          <div class="question">
+            <h3><b>Tuition</b></h3>
+            <p class="w3-text-grey">
+              What is the average cost of college tuition?
+            </p>
+            <p class="w3-text-grey">
+              How does the cost of tuition change over time?
+            </p>
+            <p class="w3-text-grey">
+              Are higher ranking schools more expensive?
+            </p>
+            <h3><b>Pay</b></h3>
+            <p class="w3-text-grey">
+              What are students expected to make after graduation?
+            </p>
+            <p class="w3-text-grey">
+              Are tuitions and salaries related to geographic locations?
+            </p>
+            <p class="w3-text-grey">
+              Do graduates from higher ranking schools make more in early and
+              mid careers?
+            </p>
+            <p class="links">
+              <a
+                href="https://www.kaggle.com/datasets/jessemostipak/college-tuition-diversity-and-pay?resource=download&select=diversity_school.csv"
+              >
+                Click here to access the data source
+              </a>
+            </p>
+            <br />
+          </div>
+          <br /><br />
+        </div>
+      </div>
+
+      <h3 class="w3-center w3-padding-24">
+        <span class="w3-tag w3-wide">VISUALIZATION</span>
+      </h3>
+      <!--    embed code for visualization made by sarah    -->
+      <div
+        class="tableauPlaceholder"
+        id="viz1665857479979"
+        style="position: relative; left: 85px"
+      >
+        <noscript
+          ><a href="#"
+            ><img
+              alt="Breaking Down the Cost of College Tuition "
+              src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionStoryLine&#47;Story1&#47;1_rss.png"
+              style="border: none" /></a></noscript
+        ><object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="TuitionStoryLine&#47;Story1" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param
+            name="static_image"
+            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionStoryLine&#47;Story1&#47;1.png"
+          />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-US" />
+          <param name="filter" value="publish=yes" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1665857479979");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        vizElement.style.width = "1016px";
+        vizElement.style.height = "991px";
+        var scriptElement = document.createElement("script");
+        scriptElement.src =
+          "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+      <br />
+      <br />
+      <h3 class="w3-center w3-padding-24">
+        <span class="w3-tag w3-wide">EXPLANATION</span>
+      </h3>
+      <p class="w3-hide-small">
+        <span class="w3-tag">Data Selection:</span>
+      </p>
+      <div class="text">
+        <p class="w3-hide-small">
+          We were interested in a topic that's closely related to us, so we
+          adopted the data set "College tuition, diversity, and pay" from
+          Kaggle. This dataset is pretty clean and comes in 5 separate CSV
+          files, and we think it would be easy to do for our mini project 2. As
+          we were discussing the focus of our visualization, we reached the
+          consensus that we are really interested in a couple of aspects:
+          tuition cost, salary after graduation (i.e. early career), salary in
+          mid career, and the impact of school rankings and geographical
+          locations. Next, we put our focus in making the visualizations of our
+          selected topics. Hope you find it interesting!
+          <br />
+          Here are some notes from the source website:
+          <br />
+          "Historical averages from the National Center for Education Statistics
+          (NCES) - spanning the years 1985 - 2016. Tuition and fees by
+          college/university for 2018-2019, along with school type, degree
+          length, state, in-state vs out-of-state from the Chronicle of Higher
+          Education. Diversity by college/university for 2014, along with school
+          type, degree length, state, in-state vs out-of-state from the
+          Chronicle of Higher Education. Example diversity graphics from
+          Priceonomics. Average net cost by income bracket from
+          TuitionTracker.org. Example price trend and graduation rates from
+          TuitionTracker.org Salary potential data comes from payscale.com."
+        </p>
+      </div>
+      <br />
+      <!-- data interpretations -->
+      <p class="w3-hide-small">
+        <span class="w3-tag">Interpretation of Data:</span>
+      </p>
+      <!-- interpretation 1 -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665772222973"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Tuition Changes in Different Types of Schools "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionChangesinDifferentTypesofSchools&#47;tuitionbytypeofschool&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="TuitionChangesinDifferentTypesofSchools&#47;tuitionbytypeofschool"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionChangesinDifferentTypesofSchools&#47;tuitionbytypeofschool&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665772222973");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              We start by looking at the average costs of tuition. We
+              parallelled four charts (average in/out state tuition and average
+              in/out total cost which includes boarding etc.), each containing
+              three bar charts: public, private, and others. It is evident from
+              the bar chart that tuition in private schools is much higher than
+              those of public. The average total tuition for private schools is
+              around 39k, while the average total public school tuition is
+              around 14k.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <!--    interpretation 2  -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665857670146"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Tuition Changes Over 30 Years by Type of School "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionChangesOvertheYears&#47;TuitionOverTimebyType&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="TuitionChangesOvertheYears&#47;TuitionOverTimebyType"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionChangesOvertheYears&#47;TuitionOverTimebyType&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665857670146");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              How does the cost of college change over time? From 1985 to 2016
+              (the span of our dataset), we see that tuition costs were steadily
+              increasing. It is worth noting that public and private
+              institutions experienced similar growth rate. For example, the
+              cost of public school had nearly tripled up, while that of private
+              had nearly tripled up as well. Nevertheless, since private schools
+              are more expensive in the first place, being at similar growth
+              rate means private schools are getting more and more expensive and
+              making more and more people broke.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <!--  interpretation 3  -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665779660815"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="In State Tuition Compared to Out of State Tuition Accross Differently Ranked Schools  "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InStateTuitionAcrossRank&#47;InOutCostbyRank&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="InStateTuitionAcrossRank&#47;InOutCostbyRank"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;In&#47;InStateTuitionAcrossRank&#47;InOutCostbyRank&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665779660815");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              Ranking is important when deciding which college to go to, but it
+              is also important to compare the costs. We picked the average
+              tuition cost data for top 25 ranking schools and found the
+              following trends. By looking at the graph, we see that generally
+              the higher ranking schools are more expensive. There are three
+              caveats, however: 1. the tuition can fluctuate quite frequently
+              (see the fluctuations from one school to nearby schools). 2.
+              college rankings can change 3. we did not include more data for
+              other schools such as top 50 or 100 colleges.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <!-- interpretation 4  -->
+      <div class="grid-container">
+        <div class="grid-item">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665779682703"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Tuition Prices Compared to Expected Salary accross Different Ranks of Schools "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionandSalaryAcrossRank&#47;InOutCostandExpectedSalarybyRank&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="TuitionandSalaryAcrossRank&#47;InOutCostandExpectedSalarybyRank"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionandSalaryAcrossRank&#47;InOutCostandExpectedSalarybyRank&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665779682703");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              Do graduates from higher ranking schools make more in early and
+              mid careers? The answer is yes. Our trend line shows that as the
+              ranking of a school increases, so do the expected early and mid career
+              salaries. To emphasize the cost of tuitions, we put the
+              cost of attending these schools in blue and orange lines.
+              Together, we can get some nice conclusions: 1. higher ranking does
+              pay off. 2. but we need to pay more to attend higher ranking
+              schools. Whether it's worth it or not comes back to individual's
+              decision.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <!-- interpretation 5 -->
+      <div class="grid-container">
+        <div class="grid-item map">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665855683529"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Tuition Prices Across States By School Type "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionbyLocationandSchoolType&#47;TuitionbyLocation&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="TuitionbyLocationandSchoolType&#47;TuitionbyLocation"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tu&#47;TuitionbyLocationandSchoolType&#47;TuitionbyLocation&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665855683529");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            if (divElement.offsetWidth > 800) {
+              vizElement.style.minWidth = "420px";
+              vizElement.style.maxWidth = "650px";
+              vizElement.style.width = "100%";
+              vizElement.style.minHeight = "587px";
+              vizElement.style.maxHeight = "887px";
+              vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            } else if (divElement.offsetWidth > 500) {
+              vizElement.style.minWidth = "420px";
+              vizElement.style.maxWidth = "650px";
+              vizElement.style.width = "100%";
+              vizElement.style.minHeight = "587px";
+              vizElement.style.maxHeight = "887px";
+              vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            } else {
+              vizElement.style.width = "100%";
+              vizElement.style.height = "777px";
+            }
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              Now we look at the relation between geographical location and
+              tuition cost. We originally predicted that more expensive states
+              have more expensive schools. Our prediction is confirmed by the
+              map, but a couple of states caught our eyes. In Alaska, the cost
+              of public school is relatively higher than other US states,
+              whereas private schools are cheaper than private schools in other
+              states. What's more, we found that expensive private schools are
+              generally located in either east or west coast, while expensive
+              public schools are still located in the east coast.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- interpretation 6 -->
+      <div class="grid-container">
+        <div class="grid-item map">
+          <div
+            class="tableauPlaceholder"
+            id="viz1665779748154"
+            style="position: relative"
+          >
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Salary Estimates By Location "
+                  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SalaryEstimateByLocation&#47;SalarybyState&#47;1_rss.png"
+                  style="border: none" /></a></noscript
+            ><object class="tableauViz" style="display: none">
+              <param
+                name="host_url"
+                value="https%3A%2F%2Fpublic.tableau.com%2F"
+              />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param
+                name="name"
+                value="SalaryEstimateByLocation&#47;SalarybyState"
+              />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param
+                name="static_image"
+                value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SalaryEstimateByLocation&#47;SalarybyState&#47;1.png"
+              />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1665779748154");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            if (divElement.offsetWidth > 800) {
+              vizElement.style.minWidth = "420px";
+              vizElement.style.maxWidth = "650px";
+              vizElement.style.width = "100%";
+              vizElement.style.minHeight = "587px";
+              vizElement.style.maxHeight = "887px";
+              vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            } else if (divElement.offsetWidth > 500) {
+              vizElement.style.minWidth = "420px";
+              vizElement.style.maxWidth = "650px";
+              vizElement.style.width = "100%";
+              vizElement.style.minHeight = "587px";
+              vizElement.style.maxHeight = "887px";
+              vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+            } else {
+              vizElement.style.width = "100%";
+              vizElement.style.height = "777px";
+            }
+            var scriptElement = document.createElement("script");
+            scriptElement.src =
+              "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+        </div>
+        <div class="w3-container w3-card">
+          <div class="text">
+            <p>
+              When we look at salary after graduation, which is another topic we
+              are intersted in, we found that in economically robust area (such
+              as California, New York, and Massachussets), the pay will be
+              higher. In the previous analysis, we also saw that the cost of
+              attending schools in those areas are higher. One implication we
+              draw is that for a high schooler who wants to make the most out of
+              his career, it is advisable to go to school in those areas, but he
+              needs to face a more expensive reality in terms of college
+              tuition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="w3-hide-small">
+        <span class="w3-tag">Takeaway:</span>
+      </p>
+      <div class="text">
+        <p class="w3-hide-small">
+          In this project, we answered the 6 questions we asked at the
+          beginning, and used Tabulau to create amazing visualizations based on
+          our dataset. Fundamentally, we found that the average cost of college
+          tuition for private school costs around $35k, in-state public schools cost around $8k,
+          and out of state public schools cost around $15k. We found that tuition has steadily increased throughout the last 30 years, with private schools increasing at the same right despite being already significantly more expensive than public schools. In addition, higher ranking schools do tend to be more
+          expensive, but the data also says graduates from those higher ranking
+          schools will earn more in their caeer. Finally, we found that tuition
+          cost and earning after graduation are correlated with geographical
+          locations. Someone who goes to school in the east, for example, will
+          have to pay more on tuition than someone who goes to school in the
+          midwest; nevertheless, they will also likely to earn more throughout his
+          career. To wrap up, we hope this project is insightful and inspiring
+          for high schoolers deciding which college to go to.
+        </p>
+      </div>
+      <p class="w3-hide-small"></p>
+
+      <footer class="w3-center w3-padding-48 w3-large">
+        <hr />
+        <p>Le Lyu, Sarah Oliver, Peiyu Zhong</p>
+      </footer>
+    </div>
+  </body>
+</html>
